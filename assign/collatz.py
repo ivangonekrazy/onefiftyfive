@@ -14,5 +14,6 @@ def collatz(num):
 if __name__ == "__main__":
     #collatz(1024)
     #collatz(50)
+    collatz(10)
     #collatz(1)
-    collatz(0)
+    #collatz(0)
