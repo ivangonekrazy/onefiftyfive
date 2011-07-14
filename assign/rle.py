@@ -47,6 +47,7 @@ def run_length_encoder(s):
     stash = []
     run_length = 0
 
+    # deal with the case of an empty string
     if len(s) > 0:
         prev_char = s[0]
     else:
