@@ -68,6 +68,8 @@ def run_length_encoder(s):
     return stash
 
 if __name__ == '__main__':
+    
+    # run the tests in the docstrings
     import doctest
-    doctest.testmod()
+    doctest.testmod(verbose=True)
 
