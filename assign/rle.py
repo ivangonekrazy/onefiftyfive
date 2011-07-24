@@ -44,32 +44,30 @@ def run_length_encoder(s):
     []
 
     """
-    stash = []
+    runs = []
     run_length = 0
+    first_letter = True
 
     # deal with the case of an empty string
     if len(s) > 0:
         prev_char = s[0]
     else:
-        return stash
+        return runs
 
-    for idx, char in enumerate(s):
+    for char in s:
+
+        if first_letter:
+            prev_char = char
+            first_letter = False
 
         if char != prev_char:
-            stash.append( (run_length, prev_char) )
+            runs.append( (run_length, prev_char) )
             prev_char = char
             run_length = 0
 
         run_length += 1
 
-        if idx == len(s)-1:
-            stash.append( (run_length, prev_char) )
+    # save what was left over from the final iteration of the loop
+    runs.append( (run_length, prev_char) )
 
-    return stash
-
-if __name__ == '__main__':
-    
-    # run the tests in the docstrings
-    import doctest
-    doctest.testmod(verbose=True)
-
+    return runs
