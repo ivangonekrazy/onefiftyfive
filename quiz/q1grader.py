@@ -27,14 +27,20 @@ def _head_tail(l):
 def _count_cubeX(bigcube):
     """
     >>> bigcube = [
-            [['X','X','X'],['X','O','O'],['X','O','X']],
-            [['X','O','O'],['X','O','X'],['X','X','X']],
-            [['O','O','X'],['O','O','O'],['O','O','X']], 
-        ]
-    >>> count_cubeX(bigcube)
+    ... [['X','X','X'],['X','O','O'],['X','O','X']],
+    ... [['X','O','O'],['X','O','X'],['X','X','X']],
+    ... [['O','O','X'],['O','O','O'],['O','O','X']],
+    ... ]
+    >>> _count_cubeX(bigcube)
     14
+    >>> bigcube = [
+    ... [['X','X','X'],['X','X','X'],['X','X','X']],
+    ... [['X','X','X'],['X','X','X'],['X','X','X']],
+    ... [['X','X','X'],['X','X','X'],['X','X','X']],
+    ... ]
+    >>> _count_cubeX(bigcube)
+    27
     """
-    pass
     return q.count_cubeX(bigcube)
 
 if __name__ == "__main__":
