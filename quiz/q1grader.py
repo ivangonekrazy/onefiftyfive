@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import imp
 import doctest
 import sys
